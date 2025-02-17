@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
-  userName: {
+  username: {
     type: String,
     required: [true, "Please provide a username"],
     unique: [true, "Please choose a unique username"],
@@ -29,6 +29,7 @@ const userSchema = new mongoose.Schema({
   verifyTokenExpiry: Date,
 });
 
-const User = mongoose.model.user || mongoose.model("users", userSchema);
+// Check if model already exists before defining it
+const User = mongoose.models.Users || mongoose.model("Users", userSchema);
 
 export default User;
