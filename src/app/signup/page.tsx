@@ -23,7 +23,7 @@ export default function SingUpPage(){
       console.log("Sign Up success",response);
       router.push("/login")
       
-    } catch (error) {
+    } catch (error: any) {
       console.error("User registration failed",{error: error});
       
     } finally{

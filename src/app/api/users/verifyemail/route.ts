@@ -36,6 +36,8 @@ export async function POST(request: NextRequest) {
         )
         
     } catch (error: any) {
+        console.log("The error in verifying token",error);
+        
         return NextResponse.json({error: error.message}, {status: 500})
     }
 }
