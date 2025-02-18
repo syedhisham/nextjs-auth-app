@@ -37,7 +37,7 @@ export const sendEmail = async ({ email, emailType, userId }: any) => {
           ? `<div style="font-family: Arial, sans-serif; text-align: center; padding: 20px;">
             <h2>Email Verification</h2>
             <p>Thank you for registering! Please verify your email by clicking the button below:</p>
-            <a href="${process.env.DOMAIN}/verify-email?token=${hashedToken}" 
+            <a href="${process.env.DOMAIN}/verifyemail?token=${hashedToken}" 
                style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px; margin-top: 10px;">
                Verify Email
             </a>
